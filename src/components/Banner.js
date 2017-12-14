@@ -19,6 +19,7 @@ const Container = styled.header`
     padding: 1rem 5rem;
 
     a {
+      font-size: 1.5rem;
       color: white;
       text-decoration: none;
     }
@@ -54,7 +55,7 @@ export default () => {
     <Container>
       <img src="./images/banner.png" alt="Brooklyn and Manhattan Bridges." />
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Reactor</Link>
         <Link to="/login">Log In</Link>
       </nav>
       <h1>Hello, welcome to Reactor</h1>
