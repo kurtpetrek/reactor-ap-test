@@ -9,7 +9,7 @@ import Footer from "./../components/Footer";
 const Row = styled.div`
   display: flex;
   padding: 1rem 3rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
   .col {
     flex: 1;
   }
@@ -43,6 +43,7 @@ const FeatureContainer = styled.div`
 const ImageGallery = styled.div`
   padding: 2rem 3rem 3rem;
   border-bottom: 1px solid #d8d8d8;
+  margin: 2rem 0;
 
   h3 {
     text-align: center;

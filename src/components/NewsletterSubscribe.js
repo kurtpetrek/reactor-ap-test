@@ -9,9 +9,9 @@ const Container = styled.div`
 
   input {
     width: 450px;
-    padding: 0.3rem 80px 0.3rem 0.3rem;
+    padding: 0.3rem 80px 0.3rem 0.5rem;
     font-size: 1.2rem;
-    height: 3rem;
+    height: 4rem;
     display: inline-block;
     border: 1px #1e3656 solid;
 
@@ -27,16 +27,19 @@ const Container = styled.div`
     top: 0;
     background: #1e3656;
     color: #fff;
-    height: 3rem;
+    height: 4rem;
     padding: 0 3rem;
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
     border: 3px solid #1e3656;
     transition: 0.25s;
-    &:hover {
+    &:hover,
+    &:focus {
       background: #fff;
       color: #1e3656;
+      outline: none;
+      transform: scale(1.05);
     }
   }
 

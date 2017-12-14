@@ -7,6 +7,7 @@ const Container = styled.header`
   width: 100%;
   position: relative;
   overflow: hidden;
+  max-height: 75vh;
 
   nav {
     position: absolute;
