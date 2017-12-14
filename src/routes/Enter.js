@@ -65,12 +65,12 @@ export default class Enter extends Component {
         <EnterContainer>
           <EnterOptions>
             <div>
-              <Link to="/signup" className={this.state.currentView === "signup" && "active"}>
+              <Link to="/signup" className={this.state.currentView === "signup" ? "active" : ""}>
                 Sign Up
               </Link>
             </div>
             <div>
-              <Link to="/login" className={this.state.currentView === "login" && "active"}>
+              <Link to="/login" className={this.state.currentView === "login" ? "active" : ""}>
                 Login
               </Link>
             </div>
