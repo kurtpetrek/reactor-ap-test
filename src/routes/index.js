@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -8,10 +8,10 @@ import SignUp from "./SignUp";
 
 export default () => (
   <Router>
-    <switch>
+    <div>
       <Route path="/" exact component={Home} />
       <Route path="/login" exact component={Login} />
       <Route path="/signup" exact component={SignUp} />
-    </switch>
+    </div>
   </Router>
 );

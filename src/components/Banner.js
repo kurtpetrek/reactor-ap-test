@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
@@ -51,7 +51,7 @@ const Container = styled.header`
 export default () => {
   return (
     <Container>
-      <img src="./images/banner.jpg" />
+      <img src="./images/banner.png" alt="Brooklyn and Manhattan Bridges." />
       <nav>
         <Link to="/">Home</Link>
         <Link to="/login">Log In</Link>
