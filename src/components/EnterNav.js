@@ -8,10 +8,11 @@ const EnterOptions = styled.nav`
   a,
   div {
     flex: 1;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-size: 1.5rem;
     text-transform: uppercase;
+    transition: 300ms ease-in-out;
   }
 
   @media (max-width: 500px) {
@@ -23,6 +24,7 @@ const EnterOptions = styled.nav`
 
   a.active {
     text-decoration: underline;
+    color: rgba(255, 255, 255, 1);
   }
 `;
 
