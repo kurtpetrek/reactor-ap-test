@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import axios from "axios";
 
+import FadeIn from "./styles/FadeIn";
 import EntryInput from "./styles/EntryInput";
 import EntryButton from "./styles/EntryButton";
 
@@ -59,10 +60,18 @@ export default class SignUp extends Component {
       return (
         <form onSubmit={this.handleSignUp}>
           <h3>{this.state.error ? this.state.error : ""}</h3>
-          <EntryInput required type="text" name="username" placeholder="username" image={icUsername} />
-          <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
-          <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
-          <EntryButton type="submit">Sign Up</EntryButton>
+          <FadeIn>
+            <EntryInput required type="text" name="username" placeholder="username" image={icUsername} />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
+          </FadeIn>
+          <FadeIn delay={200}>
+            <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
+          </FadeIn>
+          <FadeIn delay={300}>
+            <EntryButton type="submit">Sign Up</EntryButton>
+          </FadeIn>
         </form>
       );
     }

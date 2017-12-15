@@ -4,6 +4,7 @@ import axios from "axios";
 
 import EntryInput from "./styles/EntryInput";
 import EntryButton from "./styles/EntryButton";
+import FadeIn from "./styles/FadeIn";
 
 import icEmail from "./../images/ic-email.png";
 import icPassword from "./../images/ic-password.png";
@@ -61,9 +62,15 @@ export default class Login extends Component {
       return (
         <form onSubmit={this.handleLogin}>
           <ErrorText>{this.state.error}</ErrorText>
-          <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
-          <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
-          <EntryButton type="submit">Login</EntryButton>
+          <FadeIn>
+            <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
+          </FadeIn>
+          <FadeIn delay={200}>
+            <EntryButton type="submit">Login</EntryButton>
+          </FadeIn>
         </form>
       );
     } else {
