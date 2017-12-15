@@ -5,6 +5,10 @@ import axios from "axios";
 import EntryInput from "./EntryInput";
 import EntryButton from "./EntryButton";
 
+import icUsername from "./../images/ic-username.png";
+import icEmail from "./../images/ic-email.png";
+import icPassword from "./../images/ic-password.png";
+
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +29,6 @@ export default class SignUp extends Component {
         formData.append(el.name, el.value);
       }
     }
-    form.elements[0];
 
     axios({
       method: "post",
@@ -35,7 +38,7 @@ export default class SignUp extends Component {
       .then(res => {
         this.setState(prevState => {
           prevState.finished = true;
-          this.state.error = "";
+          prevState.error = "";
           return prevState;
         });
       })
@@ -56,9 +59,9 @@ export default class SignUp extends Component {
       return (
         <form onSubmit={this.handleSignUp}>
           <h3>{this.state.error ? this.state.error : ""}</h3>
-          <EntryInput required type="text" name="username" placeholder="username" image="./images/ic-username.png" />
-          <EntryInput required type="email" name="email" placeholder="Email" image="./images/ic-email.png" />
-          <EntryInput required type="password" name="password" placeholder="Password" image="./images/ic-password.png" />
+          <EntryInput required type="text" name="username" placeholder="username" image={icUsername} />
+          <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
+          <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
           <EntryButton type="submit">Sign Up</EntryButton>
         </form>
       );

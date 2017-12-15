@@ -6,6 +6,8 @@ import FullPageBackground from "./../components/FullPageBackground";
 import SignUp from "./../components/SignUp";
 import Login from "./../components/Login";
 
+import onboardingBG from "./../images/onboarding-bg-lg.jpg";
+
 const Brand = styled.div`
   position: absolute;
   left: 5rem;
@@ -58,7 +60,7 @@ export default class Enter extends Component {
 
   render() {
     return (
-      <FullPageBackground background="./images/onboarding-bg-lg.jpg" backgroundPosition="10%" centerContent="true">
+      <FullPageBackground background={onboardingBG} backgroundPosition="10%" centerContent="true">
         <Brand>
           <Link to="/">Reactor</Link>
         </Brand>

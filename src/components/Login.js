@@ -5,6 +5,9 @@ import axios from "axios";
 import EntryInput from "./EntryInput";
 import EntryButton from "./EntryButton";
 
+import icEmail from "./../images/ic-email.png";
+import icPassword from "./../images/ic-password.png";
+
 const ErrorText = styled.p`
   color: white;
 `;
@@ -58,8 +61,8 @@ export default class Login extends Component {
       return (
         <form onSubmit={this.handleLogin}>
           <ErrorText>{this.state.error}</ErrorText>
-          <EntryInput required type="email" name="email" placeholder="Email" image="./images/ic-email.png" />
-          <EntryInput required type="password" name="password" placeholder="Password" image="./images/ic-password.png" />
+          <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
+          <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
           <EntryButton type="submit">Login</EntryButton>
         </form>
       );

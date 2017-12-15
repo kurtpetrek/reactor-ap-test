@@ -3,6 +3,10 @@ import axios from "axios";
 
 import styled from "styled-components";
 
+const SubscribeContainer = styled.div`
+  padding: 3rem 0;
+`;
+
 const Container = styled.form`
   width: 550px;
   margin: 2rem auto;
@@ -120,13 +124,16 @@ export default class NewsletterSubscribe extends Component {
 
   render() {
     return (
-      <Container onSubmit={this.handleEmailSubmit}>
-        <input type="email" placeholder="Your email" value={this.state.email} onChange={this.handleEmailInput} />
-        {this.state.error ? <p>There was an Error, please try again.</p> : ""}
-        {this.state.success ? <h3>Thank you!</h3> : ""}
-        {this.state.invalidEmail ? <p>Invalid Email.</p> : ""}
-        <button type="submit">Subscribe</button>
-      </Container>
+      <SubscribeContainer>
+        <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
+        <Container onSubmit={this.handleEmailSubmit}>
+          <input type="email" placeholder="Your email" value={this.state.email} onChange={this.handleEmailInput} />
+          {this.state.error ? <p>There was an Error, please try again.</p> : ""}
+          {this.state.success ? <h3>Thank you!</h3> : ""}
+          {this.state.invalidEmail ? <p>Invalid Email.</p> : ""}
+          <button type="submit">Subscribe</button>
+        </Container>
+      </SubscribeContainer>
     );
   }
 }
