@@ -14,6 +14,13 @@ const EnterOptions = styled.nav`
     text-transform: uppercase;
   }
 
+  @media (max-width: 500px) {
+    a,
+    div {
+      text-align: center;
+    }
+  }
+
   a.active {
     text-decoration: underline;
   }
