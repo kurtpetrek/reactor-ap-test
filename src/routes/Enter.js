@@ -12,6 +12,11 @@ const Brand = styled.div`
   position: absolute;
   left: 5rem;
   top: 1rem;
+  transition: left 300ms ease-out;
+
+  @media (max-width: 700px) {
+    left: 2rem;
+  }
   a {
     color: #fff;
     font-size: 1.5rem;

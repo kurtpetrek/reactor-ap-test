@@ -21,11 +21,17 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
     padding: 1rem 5rem;
+    transition: padding 300ms ease-out;
 
     a {
       font-size: 1.5rem;
       color: white;
       text-decoration: none;
+    }
+  }
+  @media (max-width: 700px) {
+    nav {
+      padding: 1rem 2rem;
     }
   }
 
