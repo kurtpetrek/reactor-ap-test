@@ -120,12 +120,12 @@ export default class NewsletterSubscribe extends Component {
 
   render() {
     return (
-      <Container>
+      <Container onSubmit={this.handleEmailSubmit}>
         <input type="email" placeholder="Your email" value={this.state.email} onChange={this.handleEmailInput} />
         {this.state.error ? <p>There was an Error, please try again.</p> : ""}
         {this.state.success ? <h3>Thank you!</h3> : ""}
         {this.state.invalidEmail ? <p>Invalid Email.</p> : ""}
-        <button onClick={this.handleEmailSubmit}>Subscribe</button>
+        <button type="submit">Subscribe</button>
       </Container>
     );
   }
