@@ -13,8 +13,15 @@ export default styled.button`
   margin-top: 2rem;
   font-size: 1.1rem;
   line-height: 3rem;
+  transition: 0.25s;
 
   &:hover {
     background: rgb(30, 54, 86);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    transform: scale(1.05);
+    outline: none;
   }
 `;
