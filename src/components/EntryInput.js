@@ -15,7 +15,7 @@ export default styled.input`
   background-image: ${props => props.image && "url(" + props.image + ")"};
   background-size: 1.6rem;
   background-repeat: no-repeat;
-  background-position: 2%;
+  background-position: 3%;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
