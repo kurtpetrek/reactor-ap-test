@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 export default styled.div`
-  background-image: url(${props => props.background});
+  background-color: ${props => props.backgroundColor};
+  background-image: url(${props => props.backgroundImage});
   min-height: 100vh;
   background-size: cover;
   background-position: ${props => props.backgroundPosition || "center"};
