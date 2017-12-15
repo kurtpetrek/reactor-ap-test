@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import Row from "./Row";
 
-import image1 from "./../images/1.png";
-import image2 from "./../images/2.png";
+import image1 from "./../images/1.jpg";
+import image2 from "./../images/2.jpg";
 
 const FeatureContainer = styled.div`
   background: #f1faef;
