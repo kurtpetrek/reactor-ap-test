@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import bannerImg from "./../images/banner.png";
+import bannerImgLg from "./../images/banner-lg.jpg";
+import bannerImgMd from "./../images/banner-md.jpg";
+import bannerImgSm from "./../images/banner-sm.jpg";
 
 import styled from "styled-components";
 
@@ -53,9 +55,15 @@ const Container = styled.header`
 `;
 
 export default () => {
+  const bannerSrcSet = `
+    ${bannerImgLg} 2000w,
+    ${bannerImgMd} 1000w,
+    ${bannerImgSm} 500w
+  `;
+
   return (
     <Container>
-      <img src={bannerImg} alt="Brooklyn and Manhattan Bridges." />
+      <img src={bannerImgLg} srcSet={bannerSrcSet} alt="Brooklyn and Manhattan Bridges." />
       <nav>
         <Link to="/">Reactor</Link>
         <Link to="/login">Log In</Link>
