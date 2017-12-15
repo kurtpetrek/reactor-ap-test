@@ -55,7 +55,7 @@ export default () => (
   <FeatureContainer>
     <Row>
       <FeatureItem className="col row">
-        <img src={image1} alt="" />
+        <img src={image1} alt="A chair and table" />
         <div>
           <h3>Regional Cuisine Down Home Southern Cooking</h3>
           <p>
@@ -65,7 +65,7 @@ export default () => (
         </div>
       </FeatureItem>
       <FeatureItem className="col row">
-        <img src={image2} alt="" />
+        <img src={image2} alt="Ice cream and coffee" />
         <div>
           <h3>Pos Hardware More Options In Less Space</h3>
           <p>
