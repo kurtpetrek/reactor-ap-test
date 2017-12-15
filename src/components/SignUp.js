@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-
 import axios from "axios";
 
 import FadeIn from "./styles/FadeIn";
 import EntryInput from "./styles/EntryInput";
 import EntryButton from "./styles/EntryButton";
+import ErrorText from "./styles/ErrorText";
 
 import icUsername from "./../images/ic-username.png";
 import icEmail from "./../images/ic-email.png";
@@ -44,7 +44,6 @@ export default class SignUp extends Component {
         });
       })
       .catch(error => {
-        console.log(error.response);
         error = error.response;
         this.setState(prevState => {
           prevState.error = error.data.message;
@@ -55,11 +54,11 @@ export default class SignUp extends Component {
 
   render() {
     if (this.state.finished) {
-      return <h1>Please check your email for confirmation.</h1>;
+      return <ErrorText>Please check your email for confirmation.</ErrorText>;
     } else {
       return (
         <form onSubmit={this.handleSignUp}>
-          <h3>{this.state.error ? this.state.error : ""}</h3>
+          {this.state.error ? <ErrorText>{this.state.error}</ErrorText> : ""}
           <FadeIn>
             <EntryInput required type="text" name="username" placeholder="username" image={icUsername} />
           </FadeIn>

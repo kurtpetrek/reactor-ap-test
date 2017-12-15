@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import axios from "axios";
 
+import Atom from "./Atom";
+
+import ErrorText from "./styles/ErrorText";
 import EntryInput from "./styles/EntryInput";
 import EntryButton from "./styles/EntryButton";
 import FadeIn from "./styles/FadeIn";
 
 import icEmail from "./../images/ic-email.png";
 import icPassword from "./../images/ic-password.png";
-
-const ErrorText = styled.p`
-  color: white;
-`;
 
 export default class Login extends Component {
   constructor(props) {
@@ -45,10 +43,8 @@ export default class Login extends Component {
           prevState.error = "";
           return prevState;
         });
-        console.log(res);
       })
       .catch(error => {
-        console.log(error.response);
         error = error.response;
         this.setState(prevState => {
           prevState.error = error.data.message;
@@ -61,7 +57,7 @@ export default class Login extends Component {
     if (!this.state.loggedIn) {
       return (
         <form onSubmit={this.handleLogin}>
-          <ErrorText>{this.state.error}</ErrorText>
+          {this.state.error ? <ErrorText>{this.state.error}</ErrorText> : ""}
           <FadeIn>
             <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
           </FadeIn>
@@ -74,7 +70,12 @@ export default class Login extends Component {
         </form>
       );
     } else {
-      return <ErrorText>You Logged in!</ErrorText>;
+      return (
+        <div>
+          <ErrorText>You Logged in!</ErrorText>
+          <Atom />
+        </div>
+      );
     }
   }
 }
