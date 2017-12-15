@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Nav from "./Nav";
-
 import bannerImgLg from "./../images/banner-lg.jpg";
 import bannerImgMd from "./../images/banner-md.jpg";
 import bannerImgSm from "./../images/banner-sm.jpg";
@@ -48,7 +46,6 @@ export default () => {
   return (
     <Container>
       <img src={bannerImgLg} srcSet={bannerSrcSet} alt="Brooklyn and Manhattan Bridges." />
-      <Nav />
       <h1>Hello, welcome to Reactor</h1>
     </Container>
   );
