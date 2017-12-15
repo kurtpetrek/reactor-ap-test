@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-import EntryInput from "./EntryInput";
-import EntryButton from "./EntryButton";
+import EntryInput from "./styles/EntryInput";
+import EntryButton from "./styles/EntryButton";
 
 import icEmail from "./../images/ic-email.png";
 import icPassword from "./../images/ic-password.png";

@@ -2,54 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import FullPageBackground from "./../components/FullPageBackground";
+import FullPageBackground from "./../components/styles/FullPageBackground";
+import EnterContainer from "./../components/styles/EnterContainer";
+import Nav from "./../components/Nav";
 import SignUp from "./../components/SignUp";
 import Login from "./../components/Login";
+import EnterNav from "./../components/EnterNav";
 
 import onboardingBG from "./../images/onboarding-bg-lg.jpg";
-
-const Brand = styled.div`
-  position: absolute;
-  left: 5rem;
-  top: 1rem;
-  transition: left 300ms ease-out;
-
-  @media (max-width: 700px) {
-    left: 2rem;
-  }
-  a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    cursor: pointer;
-  }
-`;
-
-const EnterContainer = styled.div`
-  max-width: 350px;
-  padding-top: 3rem;
-  position: relative;
-  width: 90%;
-  width: 90%;
-  margin: auto;
-`;
-
-const EnterOptions = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-  a,
-  div {
-    flex: 1;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  a.active {
-    text-decoration: underline;
-  }
-`;
 
 export default class Enter extends Component {
   constructor(props) {
@@ -66,22 +26,9 @@ export default class Enter extends Component {
   render() {
     return (
       <FullPageBackground background={onboardingBG} backgroundPosition="10%" centerContent="true">
-        <Brand>
-          <Link to="/">Reactor</Link>
-        </Brand>
+        <Nav loginHidden={true} />
         <EnterContainer>
-          <EnterOptions>
-            <div>
-              <Link to="/signup" className={this.state.currentView === "signup" ? "active" : ""}>
-                Sign Up
-              </Link>
-            </div>
-            <div>
-              <Link to="/login" className={this.state.currentView === "login" ? "active" : ""}>
-                Login
-              </Link>
-            </div>
-          </EnterOptions>
+          <EnterNav currentView={this.state.currentView} />
           {this.state.currentView === "signup" && <SignUp />}
           {this.state.currentView === "login" && <Login />}
         </EnterContainer>

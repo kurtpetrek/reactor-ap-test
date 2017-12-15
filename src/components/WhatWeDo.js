@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Row from "./Row";
+import Row from "./styles/Row";
 
 const OffsetH2 = styled.h2`
   margin-top: 6rem;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Row from "./Row";
+import Row from "./styles/Row";
 
 import image1 from "./../images/1.jpg";
 import image2 from "./../images/2.jpg";
