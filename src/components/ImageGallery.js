@@ -30,7 +30,7 @@ const data = [
 ];
 
 const Container = styled.div`
-  padding: 2rem 8rem 4rem;
+  padding: 1rem 8rem 5rem;
   border-bottom: 1px solid #d8d8d8;
   margin: 2rem 0;
   @media (max-width: 1000px) {
@@ -42,6 +42,7 @@ const Container = styled.div`
 
   h3 {
     text-align: center;
+    margin-bottom: 2.5rem;
   }
 
   .image-grid {

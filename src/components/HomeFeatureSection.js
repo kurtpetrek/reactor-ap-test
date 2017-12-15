@@ -8,9 +8,9 @@ import image2 from "./../images/2.jpg";
 
 const FeatureContainer = styled.div`
   background: #f1faef;
-  padding: 2rem 0;
+  padding: 4rem 0;
   border-top: 1px #d8d8d8 solid;
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     & {
       padding: 0rem 0;
     }
@@ -20,7 +20,7 @@ const FeatureContainer = styled.div`
 const FeatureItem = styled.div`
   display: flex;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 1rem 4.5rem 1rem 1rem;
   img {
     width: 40%;
     margin-right: 2rem;
@@ -33,6 +33,7 @@ const FeatureItem = styled.div`
   @media (max-width: 1000px) {
     & {
       display: block;
+      padding: 1rem;
     }
     img {
       display: block;
