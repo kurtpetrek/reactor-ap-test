@@ -24,7 +24,6 @@ const Nav = styled.nav`
 `;
 
 export default props => {
-  console.log(props);
   return (
     <Nav>
       <Link to="/">Reactor</Link>

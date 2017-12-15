@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 import FullPageBackground from "./../components/styles/FullPageBackground";
 import EnterContainer from "./../components/styles/EnterContainer";

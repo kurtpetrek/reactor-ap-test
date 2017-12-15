@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./Home";
 import Enter from "./Enter";
-// import SignUp from "./SignUp";
 
 export default () => (
   <Router>
