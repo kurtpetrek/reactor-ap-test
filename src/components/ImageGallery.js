@@ -30,9 +30,15 @@ const data = [
 ];
 
 const Container = styled.div`
-  padding: 2rem 3rem 3rem;
+  padding: 2rem 8rem 4rem;
   border-bottom: 1px solid #d8d8d8;
   margin: 2rem 0;
+  @media (max-width: 1000px) {
+    padding: 2rem 5rem 4rem;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem 4rem 4rem;
+  }
 
   h3 {
     text-align: center;
