@@ -1,18 +1,67 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+
+import axios from "axios";
 
 import EntryInput from "./EntryInput";
 import EntryButton from "./EntryButton";
 
 export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: "",
+      finished: false,
+      user_token: ""
+    };
+  }
+
+  handleSignUp = e => {
+    e.preventDefault();
+    const formData = new FormData();
+    const form = e.target;
+    for (var i = 0; i < form.elements.length; i++) {
+      let el = form.elements[i];
+      if (el.name && el.value) {
+        formData.append(el.name, el.value);
+      }
+    }
+    form.elements[0];
+
+    axios({
+      method: "post",
+      url: "http://dev3.apppartner.com/Reactors/scripts/user-signup.php",
+      data: formData
+    })
+      .then(res => {
+        this.setState(prevState => {
+          prevState.finished = true;
+          this.state.error = "";
+          return prevState;
+        });
+      })
+      .catch(error => {
+        console.log(error.response);
+        error = error.response;
+        this.setState(prevState => {
+          prevState.error = error.data.message;
+          return prevState;
+        });
+      });
+  };
+
   render() {
-    return (
-      <form>
-        <EntryInput type="text" name="username" placeholder="username" image="./images/ic-username.png" />
-        <EntryInput type="email" name="email" placeholder="Email" image="./images/ic-email.png" />
-        <EntryInput type="password" name="password" placeholder="Password" image="./images/ic-password.png" />
-        <EntryButton>Sign Up</EntryButton>
-      </form>
-    );
+    if (this.state.finished) {
+      return <h1>Please check your email for confirmation.</h1>;
+    } else {
+      return (
+        <form onSubmit={this.handleSignUp}>
+          <h3>{this.state.error ? this.state.error : ""}</h3>
+          <EntryInput required type="text" name="username" placeholder="username" image="./images/ic-username.png" />
+          <EntryInput required type="email" name="email" placeholder="Email" image="./images/ic-email.png" />
+          <EntryInput required type="password" name="password" placeholder="Password" image="./images/ic-password.png" />
+          <EntryButton type="submit">Sign Up</EntryButton>
+        </form>
+      );
+    }
   }
 }
