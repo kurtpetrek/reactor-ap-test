@@ -5,13 +5,17 @@ import styled from "styled-components";
 const EnterOptions = styled.nav`
   display: flex;
   margin-bottom: 2rem;
-  a,
+
   div {
     flex: 1;
+  }
+
+  a {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-size: 1.5rem;
     text-transform: uppercase;
+    cursor: pointer;
     transition: 300ms ease-in-out;
   }
 
@@ -25,6 +29,16 @@ const EnterOptions = styled.nav`
   a.active {
     text-decoration: underline;
     color: rgba(255, 255, 255, 1);
+    animation: fade-in 300ms forwards;
+
+    @keyframes fade-in {
+      0% {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      100% {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
   }
 `;
 
