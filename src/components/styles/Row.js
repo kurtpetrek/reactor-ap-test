@@ -4,7 +4,7 @@ export default styled.div`
   display: flex;
   padding: 1rem 3rem;
   margin: 4rem 0;
-  .col {
+  & > * {
     flex: 1;
   }
   @media (max-width: 700px) {
@@ -13,4 +13,3 @@ export default styled.div`
     }
   }
 `;
-
