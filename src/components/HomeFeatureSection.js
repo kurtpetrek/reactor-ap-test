@@ -55,7 +55,7 @@ const FeatureItem = styled.div`
 export default () => (
   <FeatureContainer>
     <Row>
-      <FeatureItem className="col">
+      <FeatureItem>
         <img src={image1} alt="A chair and table" className="reveal" />
         <div>
           <h3>Regional Cuisine Down Home Southern Cooking</h3>
@@ -65,7 +65,7 @@ export default () => (
           </p>
         </div>
       </FeatureItem>
-      <FeatureItem className="col">
+      <FeatureItem>
         <img src={image2} alt="Ice cream and coffee" className="reveal" />
         <div>
           <h3>Pos Hardware More Options In Less Space</h3>

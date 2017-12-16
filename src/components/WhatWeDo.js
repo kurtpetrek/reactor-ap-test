@@ -8,6 +8,7 @@ const OffsetH2 = styled.h2`
   position: relative;
   left: 5rem;
   transition: left 200ms ease-in-out;
+  text-transform: uppercase;
 
   @media (max-width: 1000px) {
     left: 0rem;
@@ -31,8 +32,8 @@ const PaddedContainer = styled.div`
 export default () => (
   <PaddedContainer>
     <Row>
-      <OffsetH2 className="col">WHAT WE DO</OffsetH2>
-      <div className="col">
+      <OffsetH2>What We Do</OffsetH2>
+      <div>
         <h3>We Do</h3>
         <p>
           The quick, brown fox jumps over a lazy dog.<br />
