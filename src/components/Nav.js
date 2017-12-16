@@ -15,7 +15,7 @@ const NavContainer = styled.nav`
 
   &.fixed {
     position: fixed;
-    background: rgba(30, 54, 86, 1);
+    background: ${p => p.theme.darkBlue};
   }
 
   @media (max-width: 700px) {
@@ -40,7 +40,7 @@ export default class Nav extends Component {
   }
 
   componentDidMount() {
-    if (window.pageYOffset > 0 && this.state.fixNav) {
+    if (window.pageYOffset > 30 && this.state.fixNav) {
       this.setState(prevState => {
         const state = { ...prevState };
         state.fixed = true;
@@ -56,13 +56,13 @@ export default class Nav extends Component {
 
   handleScroll = e => {
     const pos = window.pageYOffset;
-    if (!this.state.fixed && pos > 0) {
+    if (!this.state.fixed && pos > 30) {
       this.setState(prevState => {
         const state = { ...prevState };
         state.fixed = true;
         return state;
       });
-    } else if (pos < 1) {
+    } else if (pos <= 30) {
       this.setState(prevState => {
         const state = { ...prevState };
         state.fixed = false;

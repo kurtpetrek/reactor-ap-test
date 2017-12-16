@@ -24,7 +24,7 @@ const Container = styled.form`
 
     &:focus {
       outline: none;
-      border-left: 5px #1e3656 solid;
+      border-left: 5px ${p => p.theme.darkBlue} solid;
     }
   }
 
@@ -32,19 +32,19 @@ const Container = styled.form`
     position: absolute;
     right: 0;
     top: 0;
-    background: #1e3656;
-    color: #fff;
+    background: ${p => p.theme.darkBlue};
+    color: ${p => p.theme.white};
     height: 4rem;
     padding: 0 3rem;
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
-    border: 3px solid #1e3656;
+    border: 3px solid ${p => p.theme.darkBlue};
     transition: 0.25s;
     &:hover,
     &:focus {
-      background: #fff;
-      color: #1e3656;
+      background: ${p => p.theme.white};
+      color: ${p => p.theme.darkBlue};
       outline: none;
       transform: scale(1.05);
     }
@@ -81,8 +81,9 @@ export default class NewsletterSubscribe extends Component {
   handleEmailInput = e => {
     let email = e.target.value;
     this.setState(prevState => {
-      prevState.email = email;
-      return prevState;
+      const state = { ...prevState };
+      state.email = email;
+      return state;
     });
   };
 
@@ -99,25 +100,28 @@ export default class NewsletterSubscribe extends Component {
       })
         .then(response => {
           this.setState(prevState => {
-            prevState.email = "";
-            prevState.success = true;
-            prevState.invalidEmail = false;
-            return prevState;
+            const state = { ...prevState };
+            state.email = "";
+            state.success = true;
+            state.invalidEmail = false;
+            return state;
           });
         })
         .catch(error => {
           this.setState(prevState => {
-            prevState.invalidEmail = false;
-            prevState.success = false;
-            prevState.error = true;
-            return prevState;
+            const state = { ...prevState };
+            state.invalidEmail = false;
+            state.success = false;
+            state.error = true;
+            return state;
           });
         });
     } else {
       this.setState(prevState => {
+        const state = { ...prevState };
         prevState.invalidEmail = true;
         prevState.success = false;
-        return prevState;
+        return state;
       });
     }
   };

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ThemeProvider } from "styled-components";
+import colors from "./../theme/colors";
 
 import FullPageBackground from "./../components/styles/FullPageBackground";
 import EnterContainer from "./../components/styles/EnterContainer";
@@ -23,14 +25,16 @@ export default class Enter extends Component {
 
   render() {
     return (
-      <FullPageBackground backgroundImage={onboardingBG} backgroundColor={"#7B8792"} backgroundPosition="10%" centerContent="true">
-        <Nav loginHidden={true} />
-        <EnterContainer>
-          <EnterNav currentView={this.state.currentView} />
-          {this.state.currentView === "signup" && <SignUp />}
-          {this.state.currentView === "login" && <Login />}
-        </EnterContainer>
-      </FullPageBackground>
+      <ThemeProvider theme={colors}>
+        <FullPageBackground backgroundImage={onboardingBG} backgroundColor={"#7B8792"} backgroundPosition="10%" centerContent="true">
+          <Nav loginHidden={true} />
+          <EnterContainer>
+            <EnterNav currentView={this.state.currentView} />
+            {this.state.currentView === "signup" && <SignUp />}
+            {this.state.currentView === "login" && <Login />}
+          </EnterContainer>
+        </FullPageBackground>
+      </ThemeProvider>
     );
   }
 }

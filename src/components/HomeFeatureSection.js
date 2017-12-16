@@ -7,9 +7,9 @@ import image1 from "./../images/1.jpg";
 import image2 from "./../images/2.jpg";
 
 const FeatureContainer = styled.div`
-  background: #f1faef;
+  background: ${p => p.theme.lightSage};
   padding: 4rem 0;
-  border-top: 1px #d8d8d8 solid;
+  border-top: 1px ${p => p.theme.lightGray} solid;
   @media (max-width: 1000px) {
     & {
       padding: 0rem 0;

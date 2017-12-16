@@ -10,7 +10,7 @@ export default class Reveal extends Component {
   }
   componentDidMount() {
     const sr = ScrollReveal({ reset: true });
-    sr.reveal(".reveal", { duration: 200, opacity: 0.7 });
+    sr.reveal(".reveal", { duration: 200, opacity: 0.7, scale: 0.95 });
   }
   render() {
     return <div>{children}</div>;

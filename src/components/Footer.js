@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.footer`
-  background: #1e3656;
+  background: ${p => p.theme.darkBlue};
   height: 200px;
-  color: #fff;
+  color: ${p => p.theme.white};
   display: flex;
   align-items: center;
   justify-content: center;

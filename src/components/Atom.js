@@ -8,7 +8,10 @@ let size = "50";
 let sizeValue = "px";
 
 const Container = styled.div`
-  ${props => props.time && (time = props.time)} ${props => props.size && (size = props.size)} animation: spin ${time * 2 + timeValue} infinite linear;
+  ${props => {
+    time = props.time || time;
+    size = props.size || size;
+  }} animation: spin ${time * 2 + timeValue} infinite linear;
 
   width: ${size + sizeValue};
   margin: 3rem auto;
@@ -27,14 +30,14 @@ const Container = styled.div`
     width: ${size + sizeValue};
     height: ${size + sizeValue};
     border-radius: 50%;
-    background: #e43c4b;
-    background: radial-gradient(circle at center, lighten(#e43c4b, 20%), #e43c4b);
+    background: ${p => p.theme.red};
+    background: radial-gradient(circle at center, lighten(${p => p.theme.red}, 20%), ${p => p.theme.red});
 
     &__orbit {
       width: ${size / 3 + sizeValue};
       height: ${size / 3 + sizeValue};
-      background: #1e3656;
-      background: radial-gradient(circle at center, lighten(#1e3656, 7%), #1e3656);
+      background: ${props => props.theme.darkBlue};
+      background: radial-gradient(circle at center, lighten(${props => props.theme.darkBlue}, 7%), ${props => props.theme.darkBlue});
       border-radius: 50%;
       position: absolute;
       transform: translate(-50%, -50%);

@@ -7,7 +7,7 @@ export default styled.input`
   line-height: 3rem;
   font-size: 1.3rem;
   padding: 0.5rem 1rem 0.5rem 3rem;
-  color: #fff;
+  color: ${p => p.theme.white};
   border: 3px solid transparent;
   background-color: rgba(30, 54, 86, 0.15);
   margin: 1.5rem 0;
@@ -22,7 +22,7 @@ export default styled.input`
   }
 
   &:focus {
-    border: #fff solid 3px;
+    border: ${p => p.theme.white} solid 3px;
     outline: none;
   }
 `;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export default styled.button`
   width: 100%;
   border-radius: 30px;
-  background: #e43c4b;
-  color: #fff;
+  background: ${p => p.theme.red};
+  color: ${p => p.theme.white};
   text-align: center;
   height: 3rem;
   text-transform: uppercase;
@@ -16,7 +16,7 @@ export default styled.button`
   transition: 0.25s;
 
   &:hover {
-    background: rgb(30, 54, 86);
+    background: ${p => p.theme.darkBlue};
     transform: scale(1.05);
   }
 

@@ -39,16 +39,18 @@ export default class Login extends Component {
     })
       .then(res => {
         this.setState(prevState => {
-          prevState.loggedIn = true;
-          prevState.error = "";
-          return prevState;
+          const state = { ...prevState };
+          state.loggedIn = true;
+          state.error = "";
+          return state;
         });
       })
       .catch(error => {
         error = error.response;
         this.setState(prevState => {
-          prevState.error = error.data.message;
-          return prevState;
+          const state = { ...prevState };
+          state.error = error.data.message;
+          return state;
         });
       });
   };

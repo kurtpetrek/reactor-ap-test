@@ -38,16 +38,18 @@ export default class SignUp extends Component {
     })
       .then(res => {
         this.setState(prevState => {
-          prevState.finished = true;
-          prevState.error = "";
-          return prevState;
+          const state = { ...prevState };
+          state.finished = true;
+          state.error = "";
+          return state;
         });
       })
       .catch(error => {
         error = error.response;
         this.setState(prevState => {
-          prevState.error = error.data.message;
-          return prevState;
+          const state = { ...prevState };
+          state.error = error.data.message;
+          return state;
         });
       });
   };

@@ -1,4 +1,6 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import colors from "./../theme/colors";
 
 import Reveal from "./../components/Reveal";
 import Nav from "./../components/Nav";
@@ -11,14 +13,16 @@ import Footer from "./../components/Footer";
 
 export default () => {
   return (
-    <Reveal>
-      <Nav fixNav={true} />
-      <Banner />
-      <WhatWeDo />
-      <HomeFeatureSection />
-      <ImageGallery />
-      <NewsletterSubscribe />
-      <Footer />
-    </Reveal>
+    <ThemeProvider theme={colors}>
+      <Reveal>
+        <Nav fixNav={true} />
+        <Banner />
+        <WhatWeDo />
+        <HomeFeatureSection />
+        <ImageGallery />
+        <NewsletterSubscribe />
+        <Footer />
+      </Reveal>
+    </ThemeProvider>
   );
 };
