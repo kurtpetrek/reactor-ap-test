@@ -87,7 +87,7 @@ const Container = styled.div`
 const Figure = props => {
   const el = props;
   return (
-    <figure className="image-item">
+    <figure className="image-item reveal">
       <img src={el.image} alt={el.title + " " + el.text} />
       <figcaption>
         <h3>{el.title}</h3>
