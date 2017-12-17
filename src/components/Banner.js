@@ -10,6 +10,7 @@ const Container = styled.header`
   position: relative;
   overflow: hidden;
   max-height: 75vh;
+  background-color: ${p => p.theme.dullBlue};
 
   h1 {
     position: absolute;
