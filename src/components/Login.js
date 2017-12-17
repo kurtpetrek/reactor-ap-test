@@ -60,10 +60,22 @@ export default class Login extends Component {
         <form onSubmit={this.handleLogin}>
           {this.state.error ? <ErrorText>{this.state.error}</ErrorText> : ""}
           <FadeIn>
-            <EntryInput required type="email" name="email" placeholder="Email" image={icEmail} />
+            <EntryInput
+              required
+              type="email"
+              name="email"
+              placeholder="Email"
+              image={icEmail}
+            />
           </FadeIn>
           <FadeIn delay={100}>
-            <EntryInput required type="password" name="password" placeholder="Password" image={icPassword} />
+            <EntryInput
+              required
+              type="password"
+              name="password"
+              placeholder="Password"
+              image={icPassword}
+            />
           </FadeIn>
           <FadeIn delay={200}>
             <EntryButton type="submit">Login</EntryButton>

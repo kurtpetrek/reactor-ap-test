@@ -26,7 +26,12 @@ export default class Enter extends Component {
   render() {
     return (
       <ThemeProvider theme={colors}>
-        <FullPageBackground backgroundImage={onboardingBG} backgroundColor={"#7B8792"} backgroundPosition="10%" centerContent="true">
+        <FullPageBackground
+          backgroundImage={onboardingBG}
+          backgroundColor={"#7B8792"}
+          backgroundPosition="10%"
+          centerContent="true"
+        >
           <Nav loginHidden={true} />
           <EnterContainer>
             <EnterNav currentView={this.state.currentView} />

@@ -60,8 +60,9 @@ export default () => (
         <div>
           <h3>Regional Cuisine Down Home Southern Cooking</h3>
           <p>
-            The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps Bawds jog, flick quartz, vex
-            nymphs
+            The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax
+            quiz prog. Junk MTV quiz graced by fox whelps Bawds jog, flick
+            quartz, vex nymphs
           </p>
         </div>
       </FeatureItem>
@@ -70,8 +71,9 @@ export default () => (
         <div>
           <h3>Pos Hardware More Options In Less Space</h3>
           <p>
-            The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps Bawds jog, flick quartz, vex
-            nymphs
+            The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax
+            quiz prog. Junk MTV quiz graced by fox whelps Bawds jog, flick
+            quartz, vex nymphs
           </p>
         </div>
       </FeatureItem>

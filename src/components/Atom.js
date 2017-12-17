@@ -30,13 +30,21 @@ const Container = styled.div`
     height: ${size + sizeValue};
     border-radius: 50%;
     background: ${p => p.theme.red};
-    background: radial-gradient(circle at center, lighten(${p => p.theme.red}, 20%), ${p => p.theme.red});
+    background: radial-gradient(
+      circle at center,
+      lighten(${p => p.theme.red}, 20%),
+      ${p => p.theme.red}
+    );
 
     &__orbit {
       width: ${size / 3 + sizeValue};
       height: ${size / 3 + sizeValue};
       background: ${props => props.theme.darkBlue};
-      background: radial-gradient(circle at center, lighten(${props => props.theme.darkBlue}, 7%), ${props => props.theme.darkBlue});
+      background: radial-gradient(
+        circle at center,
+        lighten(${props => props.theme.darkBlue}, 7%),
+        ${props => props.theme.darkBlue}
+      );
       border-radius: 50%;
       position: absolute;
       transform: translate(-50%, -50%);
@@ -46,17 +54,20 @@ const Container = styled.div`
     }
 
     &__orbit--2 {
-      animation: AtomOrbit-2 ${time + timeValue} infinite linear ${time * -0.25 + timeValue};
+      animation: AtomOrbit-2 ${time + timeValue} infinite linear
+        ${time * -0.25 + timeValue};
       left: 50%;
     }
 
     &__orbit--rev {
-      animation: AtomOrbit ${time + timeValue} infinite linear ${time * -0.5 + timeValue};
+      animation: AtomOrbit ${time + timeValue} infinite linear
+        ${time * -0.5 + timeValue};
       left: 50%;
     }
 
     &__orbit--2rev {
-      animation: AtomOrbit-2 ${time + timeValue} infinite linear ${time * -0.75 + timeValue};
+      animation: AtomOrbit-2 ${time + timeValue} infinite linear
+        ${time * -0.75 + timeValue};
       left: 50%;
     }
   }

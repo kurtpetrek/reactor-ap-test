@@ -131,7 +131,12 @@ export default class NewsletterSubscribe extends Component {
       <SubscribeContainer>
         <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
         <Container onSubmit={this.handleEmailSubmit}>
-          <input type="email" placeholder="Your email" value={this.state.email} onChange={this.handleEmailInput} />
+          <input
+            type="email"
+            placeholder="Your email"
+            value={this.state.email}
+            onChange={this.handleEmailInput}
+          />
           {this.state.error ? <p>There was an Error, please try again.</p> : ""}
           {this.state.success ? <h3>Thank you!</h3> : ""}
           {this.state.invalidEmail ? <p>Invalid Email.</p> : ""}

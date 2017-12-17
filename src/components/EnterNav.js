@@ -46,12 +46,18 @@ const EnterOptions = styled.nav`
 const EnterNav = props => (
   <EnterOptions>
     <div>
-      <Link to="/signup" className={props.currentView === "signup" ? "active" : ""}>
+      <Link
+        to="/signup"
+        className={props.currentView === "signup" ? "active" : ""}
+      >
         Sign Up
       </Link>
     </div>
     <div>
-      <Link to="/login" className={props.currentView === "login" ? "active" : ""}>
+      <Link
+        to="/login"
+        className={props.currentView === "login" ? "active" : ""}
+      >
         Login
       </Link>
     </div>

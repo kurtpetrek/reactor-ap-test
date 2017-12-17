@@ -78,7 +78,9 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <NavContainer className={this.state.fixed && this.state.fixNav ? "fixed" : ""}>
+      <NavContainer
+        className={this.state.fixed && this.state.fixNav ? "fixed" : ""}
+      >
         <Link to="/">Reactor</Link>
         {!this.state.loginHidden && <Link to="/login">Log In</Link>}
       </NavContainer>

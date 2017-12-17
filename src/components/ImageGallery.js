@@ -87,7 +87,15 @@ const Container = styled.div`
 `;
 
 export default () => {
-  const items = data.map(el => <GalleryFigure title={el.title} image={el.image} text={el.text} key={el.image} className="image-item reveal" />);
+  const items = data.map(el => (
+    <GalleryFigure
+      title={el.title}
+      image={el.image}
+      text={el.text}
+      key={el.image}
+      className="image-item reveal"
+    />
+  ));
 
   return (
     <Container>

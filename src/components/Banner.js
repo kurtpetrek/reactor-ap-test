@@ -46,7 +46,11 @@ export default () => {
 
   return (
     <Container>
-      <img src={bannerImgLg} srcSet={bannerSrcSet} alt="Brooklyn and Manhattan Bridges." />
+      <img
+        src={bannerImgLg}
+        srcSet={bannerSrcSet}
+        alt="Brooklyn and Manhattan Bridges."
+      />
       <h1>Hello, welcome to Reactor</h1>
     </Container>
   );
