@@ -1,5 +1,4 @@
 import React from "react";
-
 import styled from "styled-components";
 
 let time = "2";
@@ -11,12 +10,12 @@ const Container = styled.div`
   ${props => {
     time = props.time || time;
     size = props.size || size;
-  }} animation: spin ${time * 2 + timeValue} infinite linear;
+  }} animation: AtomSpin ${time * 2 + timeValue} infinite linear;
 
   width: ${size + sizeValue};
   margin: 3rem auto;
 
-  @keyframes spin {
+  @keyframes AtomSpin {
     0% {
       transform: rotate(0deg);
     }
@@ -43,26 +42,26 @@ const Container = styled.div`
       transform: translate(-50%, -50%);
       top: 50%;
       left: 50%;
-      animation: orbit ${time + timeValue} infinite linear;
+      animation: AtomOrbit ${time + timeValue} infinite linear;
     }
 
     &__orbit--2 {
-      animation: orbit-2 ${time + timeValue} infinite linear ${time * -0.25 + timeValue};
+      animation: AtomOrbit-2 ${time + timeValue} infinite linear ${time * -0.25 + timeValue};
       left: 50%;
     }
 
     &__orbit--rev {
-      animation: orbit ${time + timeValue} infinite linear ${time * -0.5 + timeValue};
+      animation: AtomOrbit ${time + timeValue} infinite linear ${time * -0.5 + timeValue};
       left: 50%;
     }
 
     &__orbit--2rev {
-      animation: orbit-2 ${time + timeValue} infinite linear ${time * -0.75 + timeValue};
+      animation: AtomOrbit-2 ${time + timeValue} infinite linear ${time * -0.75 + timeValue};
       left: 50%;
     }
   }
 
-  @keyframes orbit {
+  @keyframes AtomOrbit {
     0% {
       transform: translate(-350%, -50%) scale(1);
       z-index: 1;
@@ -87,7 +86,7 @@ const Container = styled.div`
     }
   }
 
-  @keyframes orbit-2 {
+  @keyframes AtomOrbit-2 {
     0% {
       transform: translate(-50%, -350%) scale(1);
       z-index: 1;

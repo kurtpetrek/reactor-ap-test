@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 
-export default styled.div`
+const FullPageBackground = styled.div`
   background-color: ${props => props.backgroundColor};
   background-image: url(${props => props.backgroundImage});
   min-height: 100vh;
@@ -14,3 +15,11 @@ export default styled.div`
       justify-content: center;
     `};
 `;
+
+FullPageBackground.propTypes = {
+  backgroundImage: PropTypes.string.isRequired,
+  backgroundPosition: PropTypes.string
+};
+
+export default FullPageBackground;
+

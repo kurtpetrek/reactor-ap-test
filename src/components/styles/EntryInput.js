@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-export default styled.input`
+const EntryInput = styled.input`
   display: block;
   width: 100%;
   height: 3rem;
@@ -26,3 +27,9 @@ export default styled.input`
     outline: none;
   }
 `;
+
+EntryInput.propTypes = {
+  image: PropTypes.string
+};
+
+export default EntryInput;

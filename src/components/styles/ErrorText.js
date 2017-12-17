@@ -6,10 +6,10 @@ export default styled.p`
   font-size: 1.2rem;
   border-radius: 10px;
   overflow: hidden;
-  animation: grow 0.3s ease-in-out;
+  animation: ErrorTextGrow 0.3s ease-in-out;
   text-align: center;
 
-  @keyframes grow {
+  @keyframes ErrorTextGrow {
     0% {
       max-height: 0px;
     }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -33,7 +34,7 @@ export default class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loginHidden: props.loginHidden,
+      loginHidden: props.loginHidden || false,
       fixed: false,
       fixNav: props.fixNav || false
     };
@@ -47,11 +48,15 @@ export default class Nav extends Component {
         return state;
       });
     }
-    window.addEventListener("scroll", this.handleScroll);
+    if (this.state.fixNav) {
+      window.addEventListener("scroll", this.handleScroll);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    if (this.state.fixNav) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
   }
 
   handleScroll = e => {
@@ -75,8 +80,13 @@ export default class Nav extends Component {
     return (
       <NavContainer className={this.state.fixed && this.state.fixNav ? "fixed" : ""}>
         <Link to="/">Reactor</Link>
-        {this.state.loginHidden === true ? "" : <Link to="/login">Log In</Link>}
+        {!this.state.loginHidden && <Link to="/login">Log In</Link>}
       </NavContainer>
     );
   }
 }
+
+Nav.propTypes = {
+  loginHidden: PropTypes.bool,
+  fixedNav: PropTypes.bool
+};

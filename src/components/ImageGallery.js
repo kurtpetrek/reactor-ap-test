@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import GalleryFigure from "./GalleryFigure";
 
 import image3 from "./../images/3.jpg";
 import image4 from "./../images/4.jpg";
@@ -36,6 +37,7 @@ const Container = styled.div`
   @media (max-width: 1000px) {
     padding: 2rem 5rem 4rem;
   }
+
   @media (max-width: 600px) {
     padding: 2rem 4rem 4rem;
   }
@@ -84,21 +86,9 @@ const Container = styled.div`
   }
 `;
 
-const Figure = props => {
-  const el = props;
-  return (
-    <figure className="image-item reveal">
-      <img src={el.image} alt={el.title + " " + el.text} />
-      <figcaption>
-        <h3>{el.title}</h3>
-        {el.text}
-      </figcaption>
-    </figure>
-  );
-};
-
 export default () => {
-  const items = data.map(el => <Figure title={el.title} image={el.image} text={el.text} key={el.image} />);
+  const items = data.map(el => <GalleryFigure title={el.title} image={el.image} text={el.text} key={el.image} className="image-item reveal" />);
+
   return (
     <Container>
       <h3>Maui By Air The Best Way Around The Island</h3>

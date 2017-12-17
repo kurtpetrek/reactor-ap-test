@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import Atom from "./Atom";
-
 import ErrorText from "./styles/ErrorText";
 import EntryInput from "./styles/EntryInput";
 import EntryButton from "./styles/EntryButton";
 import FadeIn from "./styles/FadeIn";
+import Atom from "./Atom";
 
 import icEmail from "./../images/ic-email.png";
 import icPassword from "./../images/ic-password.png";
