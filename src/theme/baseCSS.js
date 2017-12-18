@@ -1,7 +1,7 @@
 import colors from "./colors";
 
 export default `
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 *,
 *::before,
@@ -30,37 +30,43 @@ h1 {
   text-align: center;
   font-size: 3.125rem;
   letter-spacing: 0.6px;
+  font-weight: 700;
   color: ${colors.white};
 }
 
 h2 {
   text-align: center;
   font-size: 2rem;
-  color: ${colors.red};
   letter-spacing: 0.4px;
+  font-weight: 700;
+  color: ${colors.red};
 }
 
 h3 {
   font-size: 1.5rem;
-  color: ${colors.nero};
   letter-spacing: 0.3px;
+  font-weight: 700;
+  color: ${colors.nero};
 }
 
 h4 {
   font-size: 1.25rem;
   letter-spacing: 0.2px;
+  font-weight: 500;
   color: ${colors.nero};
 }
 
 h5 {
   font-size: 1.125rem;
   letter-spacing: 0.2px;
+  font-weight: 700;
   color: ${colors.coal};
 }
 
 p {
-  color: ${colors.darkBlue};
+  font-size: 1rem;
   letter-spacing: 0.2px;
+  color: ${colors.darkBlue};
 }
 
 figcaption {
