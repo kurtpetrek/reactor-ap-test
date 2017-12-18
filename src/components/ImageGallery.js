@@ -59,10 +59,12 @@ const Container = styled.div`
 
     .image-item {
       width: 20%;
+      max-width: 400px;
+      min-width: 185px;
       margin: 1rem 0;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
       & {
         flex-wrap: wrap;
         flex: 2;
