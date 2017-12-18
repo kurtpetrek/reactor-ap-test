@@ -15,7 +15,7 @@ const Container = styled.form`
 
   input {
     width: 450px;
-    padding: 0.5rem 80px 0.5rem 1rem;
+    padding: 0.5rem 130px 0.5rem 1rem;
     font-size: 1.2rem;
     height: 4rem;
     display: inline-block;
