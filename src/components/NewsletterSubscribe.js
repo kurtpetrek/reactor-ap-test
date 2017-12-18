@@ -57,6 +57,7 @@ const Container = styled.form`
     input {
       width: 90%;
       display: block;
+      padding: 0.5rem 1rem;
       margin: auto;
     }
     button {
