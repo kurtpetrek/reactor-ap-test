@@ -16,12 +16,51 @@ export default class Login extends Component {
     this.state = {
       loggedIn: false,
       error: "",
-      token: ""
+      token: "",
+      email: "",
+      passwordInput: false
     };
   }
 
+  handleInput = e => {
+    const el = e.target;
+    this.setState(prevState => {
+      const state = { ...prevState };
+      state[el.name] = el.value;
+      return state;
+    });
+  };
+
+  handlePasswordInput = e => {
+    const hasInput = e.value !== "";
+    this.setState(prevState => {
+      const state = { ...prevState };
+      state.passwordInput = hasInput;
+      return state;
+    });
+  };
+
   handleLogin = e => {
     e.preventDefault();
+    const { email, passwordInput } = this.state;
+
+    // For form validation function will stop if data does not pass
+    if (!email.match(/@/)) {
+      this.setState(prevState => {
+        const state = { ...prevState };
+        state.error = "Email is invalid.";
+        return state;
+      });
+      return false;
+    } else if (!passwordInput) {
+      this.setState(prevState => {
+        const state = { ...prevState };
+        state.error = "A password is required.";
+        return state;
+      });
+      return false;
+    }
+
     const formData = new FormData();
     const form = e.target;
     for (var i = 0; i < form.elements.length; i++) {
@@ -55,7 +94,7 @@ export default class Login extends Component {
   };
 
   render() {
-    const { loggedIn, error } = this.state;
+    const { loggedIn, error, email } = this.state;
     if (!loggedIn) {
       return (
         <form onSubmit={this.handleLogin}>
@@ -67,6 +106,8 @@ export default class Login extends Component {
               name="email"
               placeholder="Email"
               image={icEmail}
+              value={email}
+              onChange={this.handleInput}
             />
           </FadeIn>
           <FadeIn delay={100}>
@@ -76,6 +117,7 @@ export default class Login extends Component {
               name="password"
               placeholder="Password"
               image={icPassword}
+              onChange={this.handlePasswordInput}
             />
           </FadeIn>
           <FadeIn delay={200}>
