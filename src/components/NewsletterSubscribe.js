@@ -48,6 +48,9 @@ const Container = styled.form`
       outline: none;
       transform: scale(1.05);
     }
+    &:active {
+      transform: scale(1);
+    }
   }
 
   @media (max-width: 580px) {
@@ -120,8 +123,7 @@ export default class NewsletterSubscribe extends Component {
     } else {
       this.setState(prevState => {
         const state = { ...prevState };
-        prevState.invalidEmail = true;
-        prevState.success = false;
+        state.invalidEmail = true;
         return state;
       });
     }
@@ -135,6 +137,7 @@ export default class NewsletterSubscribe extends Component {
         <Container onSubmit={this.handleEmailSubmit}>
           <input
             type="email"
+            required
             placeholder="Your email"
             value={email}
             onChange={this.handleEmailInput}
