@@ -9,7 +9,8 @@ import SignUp from "./../components/SignUp";
 import Login from "./../components/Login";
 import EnterNav from "./../components/EnterNav";
 
-import onboardingBG from "./../images/onboarding-bg-lg.jpg";
+import onboardingBGLarge from "./../images/onboarding-bg-lg.jpg";
+import onboardingBGSmall from "./../images/onboarding-bg-sm.jpg";
 
 export default class Enter extends Component {
   constructor(props) {
@@ -27,7 +28,8 @@ export default class Enter extends Component {
     return (
       <ThemeProvider theme={colors}>
         <FullPageBackground
-          backgroundImage={onboardingBG}
+          backgroundImage={onboardingBGLarge}
+          backgroundImageSmall={onboardingBGSmall}
           backgroundColor={"#7B8792"}
           backgroundPosition="10%"
           centerContent="true"

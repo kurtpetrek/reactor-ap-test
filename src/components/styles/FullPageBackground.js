@@ -7,6 +7,7 @@ const FullPageBackground = styled.div`
   min-height: 100vh;
   background-size: cover;
   background-position: ${props => props.backgroundPosition || "center"};
+
   ${props =>
     props.centerContent &&
     css`
@@ -14,12 +15,16 @@ const FullPageBackground = styled.div`
       align-items: center;
       justify-content: center;
     `};
+
+  @media (max-width: 700px) {
+    background-image: url(${props => props.backgroundImageSmall});
+  }
 `;
 
 FullPageBackground.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
+  backgroundImageSmall: PropTypes.string,
   backgroundPosition: PropTypes.string
 };
 
 export default FullPageBackground;
-
