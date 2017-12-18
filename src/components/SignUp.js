@@ -140,7 +140,7 @@ export default class SignUp extends Component {
           </FadeIn>
           <FadeIn delay={200}>
             <EntryInput
-              // required
+              required
               type="password"
               name="password"
               placeholder="Password"
