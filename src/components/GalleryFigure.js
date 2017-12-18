@@ -7,7 +7,7 @@ const GalleryFigure = props => {
     <figure {...props}>
       <img src={image} alt={title + " " + text} />
       <figcaption>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         {text}
       </figcaption>
     </figure>
