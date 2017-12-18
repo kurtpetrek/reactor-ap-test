@@ -1,6 +1,6 @@
 # Reactor
 
-Reactor is a test application developed for App Partner as part of their interview process. Information about the project can be viewed in the [./source_assets folder](./source_assets folder).
+Reactor is a test application developed for App Partner as part of their interview process. Source material for this project can be viewed in ./source_assets.
 
 This project can be viewed [here](http://reactor.kurtpetrek.com/login)
 
@@ -14,7 +14,7 @@ This project depends on:
 * React CSS Transition
 * Scroll Reveal
 
-Colors and base styles can be edited in  [./src/themes](./src/themes). Builds include [.htaccess](./src/themes) file for React Router.
+Colors and base styles can be edited in  ./src/themes. Builds include .htaccess file for React Router.
 
 ### Project Time Breakdown
 
