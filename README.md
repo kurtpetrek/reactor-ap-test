@@ -19,11 +19,11 @@ Colors and base styles can be edited in the ./src/themes folder. Builds include 
 ### Project Time Breakdown
 
 - Day 1 Wed Dec 3rd
- * Review and read source materials
- * Setup Project
- * Create Routes
- * Create Landing Page
-   - 5 hours total
+  * Review and read source materials
+  * Setup Project
+  * Create Routes
+  * Create Landing Page
+    - 5 hours total
 - Day 2 Thu Dec 4th
   * Create Login and Sign Up views
     - 3 hours
