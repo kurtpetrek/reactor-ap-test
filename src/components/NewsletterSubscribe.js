@@ -127,6 +127,7 @@ export default class NewsletterSubscribe extends Component {
   };
 
   render() {
+    const { email, error, success, invalidEmail } = this.state;
     return (
       <SubscribeContainer>
         <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
@@ -134,12 +135,12 @@ export default class NewsletterSubscribe extends Component {
           <input
             type="email"
             placeholder="Your email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleEmailInput}
           />
-          {this.state.error ? <p>There was an Error, please try again.</p> : ""}
-          {this.state.success ? <h3>Thank you!</h3> : ""}
-          {this.state.invalidEmail ? <p>Invalid Email.</p> : ""}
+          {error && <p>There was an Error, please try again.</p>}
+          {success && <h3>Thank you!</h3>}
+          {invalidEmail && <p>Invalid Email.</p>}
           <button type="submit">Subscribe</button>
         </Container>
       </SubscribeContainer>

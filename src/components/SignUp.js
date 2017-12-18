@@ -45,22 +45,23 @@ export default class SignUp extends Component {
         });
       })
       .catch(error => {
-        error = error.response;
+        error = error.response.data.message;
         this.setState(prevState => {
           const state = { ...prevState };
-          state.error = error.data.message;
+          state.error = error;
           return state;
         });
       });
   };
 
   render() {
-    if (this.state.finished) {
+    const { finished, error } = this.state;
+    if (finished) {
       return <ErrorText>Please check your email for confirmation.</ErrorText>;
     } else {
       return (
         <form onSubmit={this.handleSignUp}>
-          {this.state.error ? <ErrorText>{this.state.error}</ErrorText> : ""}
+          {error && <ErrorText>{error}</ErrorText>}
           <FadeIn>
             <EntryInput
               required

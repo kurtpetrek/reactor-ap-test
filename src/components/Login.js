@@ -55,10 +55,11 @@ export default class Login extends Component {
   };
 
   render() {
-    if (!this.state.loggedIn) {
+    const { loggedIn, error } = this.state;
+    if (!loggedIn) {
       return (
         <form onSubmit={this.handleLogin}>
-          {this.state.error ? <ErrorText>{this.state.error}</ErrorText> : ""}
+          {error && <ErrorText>{error}</ErrorText>}
           <FadeIn>
             <EntryInput
               required
