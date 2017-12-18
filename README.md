@@ -16,13 +16,50 @@ This project depends on:
 
 Colors and base styles can be edited in the ./src/themes folder. Builds include .htaccess file for React Router.
 
-To develop this project:
+### Project Time Breakdown
+
+- Day 1 Wed Dec 3rd
+ * Review and read source materials
+ * Setup Project
+ * Create Routes
+ * Create Landing Page
+   - 5 hours total
+- Day 2 Thu Dec 4th
+  * Create Login and Sign Up views
+    - 3 hours
+  * Add email, login and sign up logic
+    - 1.5 hours
+  * Clean and optimize code
+    - 1 hour
+- Day 3 Fri Dec 5th
+  * optimize images
+    - 1 hour
+  * Test deploying build
+    - 1 hour
+  * Add animations
+    - 2 hours
+  * Clean code, enhance styling, add theme
+    - 3 hours
+- Day 4 Sat Dec 6th
+  * Add Prettier settings in package.json
+  * Add proptypes
+  * Add gzip and cache in .htaccess
+  * enhance styling
+    - 3 hours
+- Day 5 Sun Dec 7th
+  * Clean up code
+  * Optimize images
+    - 2 hours
+
+
+
+### To develop this project:
 
 1. clone repo and cd into directory
 2. run $ npm install
 3. run $ npm start
 
-To build project
+### To build project
 
 * run $ npm build
 * project builds to ./build directory
