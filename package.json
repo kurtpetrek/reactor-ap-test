@@ -15,7 +15,7 @@
   "devDependencies": {
     "react-scripts": "1.0.17"
   },
-  "homepage": ".",
+  "homepage": "http://reactor.kurtpetrek.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
