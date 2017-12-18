@@ -67,7 +67,7 @@ export default class SignUp extends Component {
               required
               type="text"
               name="username"
-              placeholder="username"
+              placeholder="Username"
               image={icUsername}
             />
           </FadeIn>
