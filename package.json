@@ -13,7 +13,7 @@
     "styled-components": "^2.2.4"
   },
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "react-scripts": "^2.1.1"
   },
   "homepage": "http://reactor.kurtpetrek.com",
   "scripts": {
@@ -31,5 +31,11 @@
     "parser": "babylon",
     "semi": true,
     "tabWidth": 2
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
