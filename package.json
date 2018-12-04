@@ -15,8 +15,10 @@
   "devDependencies": {
     "react-scripts": "^2.1.1"
   },
-  "homepage": "http://reactor.kurtpetrek.com",
+  "homepage": "https://kurtpetrek.github.io/reactor-ap-test",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
