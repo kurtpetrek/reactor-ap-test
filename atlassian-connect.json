@@ -1,0 +1,40 @@
+{
+ "name": "Reactor",
+ "description": "Atlassian Connect app",
+ "key": "com.example.myapp",
+ "baseUrl": "http://reactor.kurtpetrek.com/",
+ "vendor": {
+     "name": "Kirk Patrick, Inc.",
+     "url": "http://example.com"
+ },
+ "authentication": {
+     "type": "none"
+ },
+ "apiVersion": 1,
+ "modules": {
+     "generalPages": [
+         {
+             "url": "/",
+             "key": "type-fall-home",
+             "location": "system.top.navigation.bar",
+             "name": {
+                 "value": "Type Fall"
+             }
+         }, {
+             "url": "/login",
+             "key": "type-fall-login",
+             "location": "system.top.navigation.bar",
+             "name": {
+                 "value": "Type Fall Login"
+             }
+         }, {
+             "url": "/signup",
+             "key": "type-fall-signup",
+             "location": "system.top.navigation.bar",
+             "name": {
+                 "value": "Type Fall Signup"
+             }
+         }
+     ]
+ }
+}
